@@ -1,35 +1,28 @@
-import express, {Express} from 'express';
 import dotenv from 'dotenv';
-import log4js from 'log4js';
-import {UserController} from "./controller/user-controller";
-import {createExpressServer, useExpressServer} from "routing-controllers";
-import httpContext from 'express-http-context';
-import bodyParser from "body-parser";
 dotenv.config();
+import express from 'express';
+import cors from 'cors';
+import fileUpload from 'express-fileupload';
+import path from 'path';
+import passport from 'passport';
 
 import sequelize from './config/db';
+import router from './routes/index';
+import errorHandlingMiddleware from './middleware/ErrorHandlingMiddleware';
+import configurePassport from './config/passport';
+import configPassport from "./config/passport";
+const PORT = process.env.PORT || 5001;
 
-const PORT = process.env.PORT;
+const app = express();
+app.use(cors());
+app.use(express.json());
+app.use(passport.initialize());
+app.use(express.static(path.resolve(__dirname, 'static')));
 
-const logger = log4js.getLogger();
-logger.level = process.env.LOG_LEVEL;
+app.use(fileUpload({}));
+app.use('/api', router);
 
-logger.info('log4js log info');
-logger.info('log4js log debug');
-logger.error('log4js log error');
-
-const app: Express = express();
-app.use(bodyParser.json());
-app.use(httpContext.middleware);
-
-useExpressServer(app, {
-  controllers: [UserController]
-});
-
-app.use((req, res, next) => {
-  httpContext.ns.bindEmitter(req);
-  httpContext.ns.bindEmitter(res);
-});
+app.use(errorHandlingMiddleware);
 
 const start = async () => {
   try {

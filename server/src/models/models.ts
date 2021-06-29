@@ -66,7 +66,7 @@ Rating.belongsTo(Item);
 Item.hasMany(BasketItem);
 BasketItem.belongsTo(Item);
 
-Item.hasMany(ItemInfo);
+Item.hasMany(ItemInfo, {as: 'info'});
 ItemInfo.belongsTo(Item);
 
 
