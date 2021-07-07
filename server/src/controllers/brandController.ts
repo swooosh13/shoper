@@ -1,6 +1,5 @@
 import Models from '../models/models';
 const {Brand} = Models;
-
 class BrandController {
   async create(req, res) {
     const {name} = req.body;

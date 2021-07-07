@@ -26,8 +26,7 @@ class UserController {
     const role = "USER";
 
     const hashedPassword = await bcrypt.hash(password, 7);
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
+
     const user: any = await User.create({email, role, password: hashedPassword});
     const basket: any = await Basket.create({userId: candidate.id});
 

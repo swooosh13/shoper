@@ -79,5 +79,5 @@ Type.belongsToMany(Brand, {through: TypeBrand});
 Brand.belongsToMany(Type, {through: TypeBrand});
 
 export default {
-  User, TypeBrand, Type, Brand, ItemInfo, Basket, BasketItem, Rating, Item
+  User, TypeBrand, Type, Brand, ItemInfo, Basket, BasketItem, Rating, Item,
 };

@@ -1,13 +1,13 @@
 import Router from "express";
 
+import passport from 'passport';
 import itemRouter from "./itemRouter";
 import brandRouter from "./brandRouter";
 import typeRouter from "./typeRouter";
 import userRouter from "./userRouter";
+import passportConfig from '../middleware/passport';
 
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-const router = new Router();
+const router = new (Router as any)();
 
 router.use('/user', userRouter);
 router.use('/type', typeRouter);

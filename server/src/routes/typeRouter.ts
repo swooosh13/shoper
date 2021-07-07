@@ -1,10 +1,12 @@
 import Router from "express";
+import passport from "passport";
 import typeController from "../controllers/typeController";
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-const router = new Router();
+import { authMiddleware } from "../middleware/passport";
+import checkRoleMiddleware from "../middleware/checkRoleMiddleware";
 
-router.post('/', typeController.create);
-router.get('/', typeController.getAll);
+const router = new (Router as any)();
+
+router.post("/", authMiddleware, checkRoleMiddleware('ADMIN'), typeController.create);
+router.get("/", authMiddleware, typeController.getAll);
 
 export default router;

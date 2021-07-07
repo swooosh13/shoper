@@ -1,11 +1,14 @@
 import Router from "express";
 import itemController from "../controllers/itemController";
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-const router = new Router();
+import passport from 'passport';
+import passportConfig from '../middleware/passport';
+
+passportConfig(passport);
+
+const router = new (Router as any)();
 
 router.post('/', itemController.create);
-router.get('/', itemController.getAll);
+router.get('/', passport.authenticate('jwt', {session: false}), itemController.getAll);
 router.get('/:id', itemController.getOne);
 
 export default router;

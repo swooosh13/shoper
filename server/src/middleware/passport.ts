@@ -1,4 +1,5 @@
 import {Strategy as JwtStrategy, ExtractJwt} from 'passport-jwt';
+import passport from 'passport';
 import Models from '../models/models';
 import ApiError from "../error/ApiError";
 
@@ -18,6 +19,8 @@ const configPassport = (passport) => {
     }
   }));
 };
+
+export const authMiddleware = passport.authenticate('jwt', {session: false});
 
 export default configPassport;
 

@@ -39,47 +39,39 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 exports.__esModule = true;
-var dotenv_1 = __importDefault(require("dotenv"));
-dotenv_1["default"].config();
-var express_1 = __importDefault(require("express"));
-var cors_1 = __importDefault(require("cors"));
-var express_fileupload_1 = __importDefault(require("express-fileupload"));
-var path_1 = __importDefault(require("path"));
-var passport_1 = __importDefault(require("passport"));
-var db_1 = __importDefault(require("./config/db"));
-var index_1 = __importDefault(require("./routes/index"));
-var ErrorHandlingMiddleware_1 = __importDefault(require("./middleware/ErrorHandlingMiddleware"));
-var PORT = process.env.PORT || 5001;
-var app = express_1["default"]();
-app.use(cors_1["default"]());
-app.use(express_1["default"].json());
-app.use(passport_1["default"].initialize());
-app.use(express_1["default"].static(path_1["default"].resolve(__dirname, 'static')));
-app.use(express_fileupload_1["default"]({}));
-app.use('/api', index_1["default"]);
-app.use(ErrorHandlingMiddleware_1["default"]);
-var start = function () { return __awaiter(void 0, void 0, void 0, function () {
-    var e_1;
-    return __generator(this, function (_a) {
-        switch (_a.label) {
-            case 0:
-                _a.trys.push([0, 3, , 4]);
-                return [4 /*yield*/, db_1["default"].authenticate()];
-            case 1:
-                _a.sent();
-                return [4 /*yield*/, db_1["default"].sync()];
-            case 2:
-                _a.sent();
-                app.listen(PORT, function () {
-                    console.log("Server has been started on port " + PORT);
-                });
-                return [3 /*break*/, 4];
-            case 3:
-                e_1 = _a.sent();
-                console.log(e_1);
-                return [3 /*break*/, 4];
-            case 4: return [2 /*return*/];
-        }
-    });
-}); };
-start();
+var models_1 = __importDefault(require("../models/models"));
+var Type = models_1["default"].Type;
+var TypeController = /** @class */ (function () {
+    function TypeController() {
+    }
+    TypeController.prototype.create = function (req, res) {
+        return __awaiter(this, void 0, void 0, function () {
+            var name, type;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        name = req.body.name;
+                        return [4 /*yield*/, Type.create({ name: name })];
+                    case 1:
+                        type = _a.sent();
+                        return [2 /*return*/, res.json(type)];
+                }
+            });
+        });
+    };
+    TypeController.prototype.getAll = function (req, res) {
+        return __awaiter(this, void 0, void 0, function () {
+            var types;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, Type.findAll()];
+                    case 1:
+                        types = _a.sent();
+                        return [2 /*return*/, res.json(types)];
+                }
+            });
+        });
+    };
+    return TypeController;
+}());
+exports["default"] = new TypeController();
