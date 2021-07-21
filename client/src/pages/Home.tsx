@@ -1,31 +1,54 @@
-import {Categories, Item} from '../components/index';
+import { useCallback, useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 
-let arr: any = Array.from(Array(35).keys());
+import { Categories, Item } from '../components/index';
+import * as actions from "../redux/actions/filters";
+import { useAppSelector } from "../redux/hooks";
+import { fetchItems } from "../redux/thunks/items";
+import { categoryNames } from "../redux/utils";
 
-const categoryNames: any = ['all', 'new', 'shirts', 't-shirts', 'sneakers', 'accessories', 'hoods'];
-const sortItems = [
-  {name: 'popularity', type: 'popular', order: 'desc'},
-  {name: 'price', type: 'prcie', order: 'desc'},
-  {name: 'abc', type: 'name', order: 'asc'},
-]
 const Home = () => {
+  const dispatch = useDispatch();
+  const { items, isLoaded } = useAppSelector(({ items }) => items);
+  const { category, sortBy } = useAppSelector(({ filters }) => filters);
+
+  useEffect(() => {
+    dispatch(fetchItems(sortBy, category));
+  }, [category]);
+
+  const onSelectCategory = useCallback((index) => {
+    dispatch(actions.setCategory(index));
+  }, []);
+
   return (
     <>
-      <div className="body__main home">
+      <div className="content__main home page__home">
         <div className="home__categories">
-          <Categories activeCategory={'all'}/>
+          <Categories
+            activeCategory={category}
+            onClickCategory={onSelectCategory}
+            items={categoryNames} />
         </div>
-        <div className="home__content">
+        <div className="home__items">
           {
-            arr.map((v: any, i: any) => {
-              return <Item key={v + Date.now().toString()} i={v}/>
-            })
+            isLoaded
+              ? items.map((obj) => (
+                <Link to={`/item/${obj.id}`} key={obj.id}>
+                  <Item
+                    {...obj}
+                  />
+                </Link>
+
+              ))
+              : null
           }
         </div>
       </div>
     </>
   )
 }
+
 
 export {
   Home

@@ -1,16 +1,29 @@
 import axios from "axios";
 
-const itemsInstance = axios.create({
-  withCredentials: true,
-  baseURL: 'http://localhost:5000'
-})
+import { ItemType, Nullable } from "../types";
 
-class Api {
-  static fetchItems(sortBy : any = '', category: (string | null) = null): any {
+const intialSortBy = {
+  type: 'popular',
+  order:'desc'
+};
+
+export type SortByType = typeof intialSortBy;
+
+
+const itemsInstance = axios.create({
+  baseURL: 'http://localhost:5000/'
+});
+
+class itemsAPI {
+  static fetchItems(sortBy : SortByType = intialSortBy, category: Nullable<number> = null): Promise<any> {
     return itemsInstance.get(`items?${category !== null ? `category=${category}` : ''}&_sort=${sortBy.type}&_order=${sortBy.order}`);
+  }
+
+  static getItemProfile(itemId: number): Promise<any> {
+    return itemsInstance.get(`items/${itemId}`);
   }
 }
 
 export {
-  Api
+  itemsAPI
 }

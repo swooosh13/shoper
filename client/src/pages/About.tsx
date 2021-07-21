@@ -1,7 +1,7 @@
 const About = () => {
   return (
     <>
-      <div className="about-block">
+      <div className="about-block page__about">
         <h1>Hi!</h1>
         <h2>This is about page</h2>
         <p>

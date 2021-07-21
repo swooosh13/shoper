@@ -1,15 +1,15 @@
 {
   "items": [
     {
-      "id": 0,
-      "brand": "MA.STRUM",
-      "title": "MA.STRUM HOODED MEN'S SOFTSHELL JACKET",
-      "description": "This MA.STRUM softshell jacket is the perfect practical choice for functionality and fashion. Designed to keep the wearer protected, with its outer softshell and hood to shield against the weather.",
-      "priceRUS": 123,
-      "priceUS": 123,
-      "categories": [],
+      "id": 2400,
+      "brand": "HAHAHAHAHAH",
+      "title": "MNS FAKER",
+      "description": "This is absolutely scam text.",
+      "priceRUS": 50000,
+      "priceUS": 10000,
+      "category": 0,
       "images": [
-        "/img/items/0.jpeg"
+        "https://images.asos-media.com/products/chernaya-futbolka-v-stile-oversized-s-printom-speredi-i-szadi-asos-design-space-jam-2/200812677-1-black?$n_640w$&wid=513&fit=constrain"
       ]
     },
     {
@@ -19,9 +19,9 @@
       "description": "This MA.STRUM softshell jacket is the perfect practical choice for functionality and fashion. Designed to keep the wearer protected, with its outer softshell and hood to shield against the weather.",
       "priceRUS": 123,
       "priceUS": 123,
-      "categories": [],
+      "category": 0,
       "images": [
-        "/img/items/1.jpeg"
+        "/img/items/1.jpg"
       ]
     },
     {
@@ -31,10 +31,9 @@
       "description": "This MA.STRUM softshell jacket is the perfect practical choice for functionality and fashion. Designed to keep the wearer protected, with its outer softshell and hood to shield against the weather.",
       "priceRUS": 123,
       "priceUS": 123,
-
-      "categories": [],
+      "category": 0,
       "images": [
-        "/img/items/2.jpeg"
+        "/img/items/2.jpg"
       ]
     },
     {
@@ -45,9 +44,9 @@
       "priceRUS": 123,
       "priceUS": 123,
 
-      "categories": [],
+      "category": 1,
       "images": [
-        "/img/items/3.jpeg"
+        "/img/items/3.jpg"
       ]
     },
     {
@@ -58,9 +57,9 @@
       "priceRUS": 123,
       "priceUS": 123,
 
-      "categories": [],
+      "category": 0,
       "images": [
-        "/img/items/4.jpeg"
+        "/img/items/4.jpg"
       ]
     },
     {
@@ -71,9 +70,9 @@
       "priceRUS": 123,
       "priceUS": 123,
 
-      "categories": [],
+      "category": 0,
       "images": [
-        "/img/items/5.jpeg"
+        "/img/items/5.jpg"
       ]
     },
     {
@@ -84,9 +83,9 @@
       "priceRUS": 123,
       "priceUS": 123,
 
-      "categories": [],
+      "category": 1,
       "images": [
-        "/img/items/6.jpeg"
+        "/img/items/6.jpg"
       ]
     },
     {
@@ -97,9 +96,9 @@
       "priceRUS": 123,
       "priceUS": 123,
 
-      "categories": [],
+      "category": 2,
       "images": [
-        "/img/items/7.jpeg"
+        "/img/items/7.jpg"
       ]
     },
     {
@@ -110,9 +109,9 @@
       "priceRUS": 123,
       "priceUS": 123,
 
-      "categories": [],
+      "category": 0,
       "images": [
-        "/img/items/8.jpeg"
+        "/img/items/8.jpg"
       ]
     },
     {
@@ -123,9 +122,9 @@
       "priceRUS": 123,
       "priceUS": 123,
 
-      "categories": [],
+      "category": 2,
       "images": [
-        "/img/items/9.jpeg"
+        "/img/items/9.jpg"
       ]
     },
     {
@@ -135,9 +134,9 @@
       "description": "This MA.STRUM softshell jacket is the perfect practical choice for functionality and fashion. Designed to keep the wearer protected, with its outer softshell and hood to shield against the weather.",
       "priceRUS": 123,
       "priceUS": 123,
-      "categories": [],
+      "category": 2,
       "images": [
-        "/img/items/10.jpeg"
+        "/img/items/10.jpg"
       ]
     },
     {
@@ -147,9 +146,9 @@
       "description": "This MA.STRUM softshell jacket is the perfect practical choice for functionality and fashion. Designed to keep the wearer protected, with its outer softshell and hood to shield against the weather.",
       "priceRUS": 123,
       "priceUS": 123,
-      "categories": [],
+      "category": 1,
       "images": [
-        "/img/items/11.jpeg"
+        "/img/items/11.jpg"
       ]
     },
     {
@@ -159,9 +158,9 @@
       "description": "This MA.STRUM softshell jacket is the perfect practical choice for functionality and fashion. Designed to keep the wearer protected, with its outer softshell and hood to shield against the weather.",
       "priceRUS": 123,
       "priceUS": 123,
-      "categories": [],
+      "category": 2,
       "images": [
-        "/img/items/12.jpeg"
+        "/img/items/12.jpg"
       ]
     },
     {
@@ -171,9 +170,9 @@
       "description": "This MA.STRUM softshell jacket is the perfect practical choice for functionality and fashion. Designed to keep the wearer protected, with its outer softshell and hood to shield against the weather.",
       "priceRUS": 123,
       "priceUS": 123,
-      "categories": [],
+      "category": 1,
       "images": [
-        "/img/items/13.jpeg"
+        "/img/items/13.jpg"
       ]
     },
     {
@@ -183,9 +182,9 @@
       "description": "This MA.STRUM softshell jacket is the perfect practical choice for functionality and fashion. Designed to keep the wearer protected, with its outer softshell and hood to shield against the weather.",
       "priceRUS": 123,
       "priceUS": 123,
-      "categories": [],
+      "category": 0,
       "images": [
-        "/img/items/14.jpeg"
+        "/img/items/14.jpg"
       ]
     },
     {
@@ -195,9 +194,9 @@
       "description": "This MA.STRUM softshell jacket is the perfect practical choice for functionality and fashion. Designed to keep the wearer protected, with its outer softshell and hood to shield against the weather.",
       "priceRUS": 1233333,
       "priceUS": 12333,
-      "categories": [],
+      "category": 2,
       "images": [
-        "/img/items/15.jpeg"
+        "/img/items/15.jpg"
       ]
     },
     {
@@ -207,9 +206,9 @@
       "description": "This MA.STRUM softshell jacket is the perfect practical choice for functionality and fashion. Designed to keep the wearer protected, with its outer softshell and hood to shield against the weather.",
       "priceRUS": 121233,
       "priceUS": 11238923,
-      "categories": [],
+      "category": 0,
       "images": [
-        "/img/items/16.jpeg"
+        "/img/items/16.jpg"
       ]
     },
     {
@@ -219,9 +218,9 @@
       "description": "This MA.STRUM softshell jacket is the perfect practical choice for functionality and fashion. Designed to keep the wearer protected, with its outer softshell and hood to shield against the weather.",
       "priceRUS": 109923,
       "priceUS": 11203923,
-      "categories": [],
+      "category": 1,
       "images": [
-        "/img/items/17.jpeg"
+        "/img/items/17.jpg"
       ]
     },
     {
@@ -231,9 +230,9 @@
       "description": "This MA.STRUM softshell jacket is the perfect practical choice for functionality and fashion. Designed to keep the wearer protected, with its outer softshell and hood to shield against the weather.",
       "priceRUS": 1,
       "priceUS": 123,
-      "categories": [],
+      "category": 1,
       "images": [
-        "/img/items/18.jpeg"
+        "/img/items/18.jpg"
       ]
     },
     {
@@ -243,9 +242,262 @@
       "description": "This MA.STRUM softshell jacket is the perfect practical choice for functionality and fashion. Designed to keep the wearer protected, with its outer softshell and hood to shield against the weather.",
       "priceRUS": 2,
       "priceUS": 123,
-      "categories": [],
+      "category": 1,
       "images": [
-        "/img/items/19.jpeg"
+        "/img/items/19.jpg"
+      ]
+    }, {
+      "id": 20,
+      "brand": "MA.STRUM",
+      "title": "MA.STRUM HOODED MEN'S SOFTSHELL JACKET",
+      "description": "This MA.STRUM softshell jacket is the perfect practical choice for functionality and fashion. Designed to keep the wearer protected, with its outer softshell and hood to shield against the weather.",
+      "priceRUS": 2,
+      "priceUS": 123,
+      "category": 1,
+      "images": [
+        "/img/items/19.jpg"
+      ]
+    }, {
+      "id": 21,
+      "brand": "MA.STRUM",
+      "title": "MA.STRUM HOODED MEN'S SOFTSHELL JACKET",
+      "description": "This MA.STRUM softshell jacket is the perfect practical choice for functionality and fashion. Designed to keep the wearer protected, with its outer softshell and hood to shield against the weather.",
+      "priceRUS": 2,
+      "priceUS": 123,
+      "category": 1,
+      "images": [
+        "/img/items/19.jpg"
+      ]
+    }, {
+      "id": 22,
+      "brand": "MA.STRUM",
+      "title": "MA.STRUM HOODED MEN'S SOFTSHELL JACKET",
+      "description": "This MA.STRUM softshell jacket is the perfect practical choice for functionality and fashion. Designed to keep the wearer protected, with its outer softshell and hood to shield against the weather.",
+      "priceRUS": 2,
+      "priceUS": 123,
+      "category": 1,
+      "images": [
+        "/img/items/19.jpg"
+      ]
+    }, {
+      "id": 23,
+      "brand": "MA.STRUM",
+      "title": "MA.STRUM HOODED MEN'S SOFTSHELL JACKET",
+      "description": "This MA.STRUM softshell jacket is the perfect practical choice for functionality and fashion. Designed to keep the wearer protected, with its outer softshell and hood to shield against the weather.",
+      "priceRUS": 2,
+      "priceUS": 123,
+      "category": 1,
+      "images": [
+        "/img/items/19.jpg"
+      ]
+    }, {
+      "id": 24,
+      "brand": "MA.STRUM",
+      "title": "MA.STRUM HOODED MEN'S SOFTSHELL JACKET",
+      "description": "This MA.STRUM softshell jacket is the perfect practical choice for functionality and fashion. Designed to keep the wearer protected, with its outer softshell and hood to shield against the weather.",
+      "priceRUS": 2,
+      "priceUS": 123,
+      "category": 1,
+      "images": [
+        "/img/items/19.jpg"
+      ]
+    }, {
+      "id": 25,
+      "brand": "MA.STRUM",
+      "title": "MA.STRUM HOODED MEN'S SOFTSHELL JACKET",
+      "description": "This MA.STRUM softshell jacket is the perfect practical choice for functionality and fashion. Designed to keep the wearer protected, with its outer softshell and hood to shield against the weather.",
+      "priceRUS": 2,
+      "priceUS": 123,
+      "category": 1,
+      "images": [
+        "/img/items/19.jpg"
+      ]
+    }, {
+      "id": 26,
+      "brand": "MA.STRUM",
+      "title": "MA.STRUM HOODED MEN'S SOFTSHELL JACKET",
+      "description": "This MA.STRUM softshell jacket is the perfect practical choice for functionality and fashion. Designed to keep the wearer protected, with its outer softshell and hood to shield against the weather.",
+      "priceRUS": 2,
+      "priceUS": 123,
+      "category": 1,
+      "images": [
+        "/img/items/19.jpg"
+      ]
+    }, {
+      "id": 27,
+      "brand": "MA.STRUM",
+      "title": "MA.STRUM HOODED MEN'S SOFTSHELL JACKET",
+      "description": "This MA.STRUM softshell jacket is the perfect practical choice for functionality and fashion. Designed to keep the wearer protected, with its outer softshell and hood to shield against the weather.",
+      "priceRUS": 2,
+      "priceUS": 123,
+      "category": 1,
+      "images": [
+        "/img/items/19.jpg"
+      ]
+    }, {
+      "id": 28,
+      "brand": "MA.STRUM",
+      "title": "MA.STRUM HOODED MEN'S SOFTSHELL JACKET",
+      "description": "This MA.STRUM softshell jacket is the perfect practical choice for functionality and fashion. Designed to keep the wearer protected, with its outer softshell and hood to shield against the weather.",
+      "priceRUS": 2,
+      "priceUS": 123,
+      "category": 1,
+      "images": [
+        "/img/items/19.jpg"
+      ]
+    }, {
+      "id": 29,
+      "brand": "MA.STRUM",
+      "title": "MA.STRUM HOODED MEN'S SOFTSHELL JACKET",
+      "description": "This MA.STRUM softshell jacket is the perfect practical choice for functionality and fashion. Designed to keep the wearer protected, with its outer softshell and hood to shield against the weather.",
+      "priceRUS": 2,
+      "priceUS": 123,
+      "category": 1,
+      "images": [
+        "/img/items/19.jpg"
+      ]
+    }, {
+      "id": 30,
+      "brand": "MA.STRUM",
+      "title": "MA.STRUM HOODED MEN'S SOFTSHELL JACKET",
+      "description": "This MA.STRUM softshell jacket is the perfect practical choice for functionality and fashion. Designed to keep the wearer protected, with its outer softshell and hood to shield against the weather.",
+      "priceRUS": 2,
+      "priceUS": 123,
+      "category": 1,
+      "images": [
+        "/img/items/19.jpg"
+      ]
+    }, {
+      "id": 31,
+      "brand": "MA.STRUM",
+      "title": "MA.STRUM HOODED MEN'S SOFTSHELL JACKET",
+      "description": "This MA.STRUM softshell jacket is the perfect practical choice for functionality and fashion. Designed to keep the wearer protected, with its outer softshell and hood to shield against the weather.",
+      "priceRUS": 2,
+      "priceUS": 123,
+      "category": 1,
+      "images": [
+        "/img/items/19.jpg"
+      ]
+    }, {
+      "id": 32,
+      "brand": "MA.STRUM",
+      "title": "MA.STRUM HOODED MEN'S SOFTSHELL JACKET",
+      "description": "This MA.STRUM softshell jacket is the perfect practical choice for functionality and fashion. Designed to keep the wearer protected, with its outer softshell and hood to shield against the weather.",
+      "priceRUS": 2,
+      "priceUS": 123,
+      "category": 1,
+      "images": [
+        "/img/items/19.jpg"
+      ]
+    }, {
+      "id": 33,
+      "brand": "MA.STRUM",
+      "title": "MA.STRUM HOODED MEN'S SOFTSHELL JACKET",
+      "description": "This MA.STRUM softshell jacket is the perfect practical choice for functionality and fashion. Designed to keep the wearer protected, with its outer softshell and hood to shield against the weather.",
+      "priceRUS": 2,
+      "priceUS": 123,
+      "category": 1,
+      "images": [
+        "/img/items/19.jpg"
+      ]
+    }, {
+      "id": 34,
+      "brand": "MA.STRUM",
+      "title": "MA.STRUM HOODED MEN'S SOFTSHELL JACKET",
+      "description": "This MA.STRUM softshell jacket is the perfect practical choice for functionality and fashion. Designed to keep the wearer protected, with its outer softshell and hood to shield against the weather.",
+      "priceRUS": 2,
+      "priceUS": 123,
+      "category": 1,
+      "images": [
+        "/img/items/19.jpg"
+      ]
+    }, {
+      "id": 35,
+      "brand": "MA.STRUM",
+      "title": "MA.STRUM HOODED MEN'S SOFTSHELL JACKET",
+      "description": "This MA.STRUM softshell jacket is the perfect practical choice for functionality and fashion. Designed to keep the wearer protected, with its outer softshell and hood to shield against the weather.",
+      "priceRUS": 2,
+      "priceUS": 123,
+      "category": 1,
+      "images": [
+        "/img/items/19.jpg"
+      ]
+    }, {
+      "id": 36,
+      "brand": "MA.STRUM",
+      "title": "MA.STRUM HOODED MEN'S SOFTSHELL JACKET",
+      "description": "This MA.STRUM softshell jacket is the perfect practical choice for functionality and fashion. Designed to keep the wearer protected, with its outer softshell and hood to shield against the weather.",
+      "priceRUS": 2,
+      "priceUS": 123,
+      "category": 1,
+      "images": [
+        "/img/items/19.jpg"
+      ]
+    }, {
+      "id": 37,
+      "brand": "MA.STRUM",
+      "title": "MA.STRUM HOODED MEN'S SOFTSHELL JACKET",
+      "description": "This MA.STRUM softshell jacket is the perfect practical choice for functionality and fashion. Designed to keep the wearer protected, with its outer softshell and hood to shield against the weather.",
+      "priceRUS": 2,
+      "priceUS": 123,
+      "category": 1,
+      "images": [
+        "/img/items/19.jpg"
+      ]
+    }, {
+      "id": 38,
+      "brand": "MA.STRUM",
+      "title": "MA.STRUM HOODED MEN'S SOFTSHELL JACKET",
+      "description": "This MA.STRUM softshell jacket is the perfect practical choice for functionality and fashion. Designed to keep the wearer protected, with its outer softshell and hood to shield against the weather.",
+      "priceRUS": 2,
+      "priceUS": 123,
+      "category": 1,
+      "images": [
+        "/img/items/19.jpg"
+      ]
+    }, {
+      "id": 39,
+      "brand": "MA.STRUM",
+      "title": "MA.STRUM HOODED MEN'S SOFTSHELL JACKET",
+      "description": "This MA.STRUM softshell jacket is the perfect practical choice for functionality and fashion. Designed to keep the wearer protected, with its outer softshell and hood to shield against the weather.",
+      "priceRUS": 2,
+      "priceUS": 123,
+      "category": 1,
+      "images": [
+        "/img/items/19.jpg"
+      ]
+    }, {
+      "id": 40,
+      "brand": "MA.STRUM",
+      "title": "MA.STRUM HOODED MEN'S SOFTSHELL JACKET",
+      "description": "This MA.STRUM softshell jacket is the perfect practical choice for functionality and fashion. Designed to keep the wearer protected, with its outer softshell and hood to shield against the weather.",
+      "priceRUS": 2,
+      "priceUS": 123,
+      "category": 1,
+      "images": [
+        "/img/items/19.jpg"
+      ]
+    }, {
+      "id": 41,
+      "brand": "MA.STRUM",
+      "title": "MA.STRUM HOODED MEN'S SOFTSHELL JACKET",
+      "description": "This MA.STRUM softshell jacket is the perfect practical choice for functionality and fashion. Designed to keep the wearer protected, with its outer softshell and hood to shield against the weather.",
+      "priceRUS": 2,
+      "priceUS": 123,
+      "category": 1,
+      "images": [
+        "/img/items/19.jpg"
+      ]
+    }, {
+      "id": 42,
+      "brand": "MA.STRUM",
+      "title": "MA.STRUM HOODED MEN'S SOFTSHELL JACKET",
+      "description": "This MA.STRUM softshell jacket is the perfect practical choice for functionality and fashion. Designed to keep the wearer protected, with its outer softshell and hood to shield against the weather.",
+      "priceRUS": 2,
+      "priceUS": 123,
+      "category": 1,
+      "images": [
+        "/img/items/19.jpg"
       ]
     }
   ]

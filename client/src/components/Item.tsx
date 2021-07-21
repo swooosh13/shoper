@@ -1,11 +1,11 @@
-type ItemType = {
-  i?: number;
-}
+import { ItemType } from "../redux/types";
 
-const Item = ({i}: ItemType) => {
+
+const Item = (props: ItemType) => {
+
   return (
     <div className="item">
-      <img width={90} height={90} src={`/img/items/${i}.jpg`} alt="" className="item__img" />
+      <img width={90} height={90} src={props.images[0]} alt="" className="item__img" />
     </div>
   )
 }
