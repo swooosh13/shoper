@@ -1,0 +1,15 @@
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+
+  .body {
+    margin: 20vh auto;
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+

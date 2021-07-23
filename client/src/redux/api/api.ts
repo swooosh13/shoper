@@ -1,6 +1,6 @@
 import axios from "axios";
 
-import { ItemType, Nullable } from "../types";
+import { Nullable } from "../types";
 
 const intialSortBy = {
   type: 'popular',

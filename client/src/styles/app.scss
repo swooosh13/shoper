@@ -1,0 +1,70 @@
+@import './components/all';
+
+
+* {
+  font-family: "Courier Prime", monospace;
+  box-sizing: border-box;
+  outline: none;
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    list-style-type: none;
+  }
+}
+
+.clear {
+  * {
+    box-sizing: border-box;
+    outline: none;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    list-style-type: none;
+  }
+}
+
+.page {
+  position: absolute;
+  justify-content: center;
+  width: 800px;
+}
+
+.page-enter-active {
+  animation: fade-in 1s forwards;
+}
+
+.page-exit-active {
+  animation: fade-out 1s forwards;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

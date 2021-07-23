@@ -32,7 +32,7 @@ const Profile = ({ itemProfile, onClickAddItem }: PropsType) => {
 
   return (
     <>
-      <div className="profile page__profile">
+      <div className="page profile">
         <div className="profile__img">
           <div className="profile__img--zoom-lens">
             <ReactImageMagnify {...{

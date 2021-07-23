@@ -1,4 +1,4 @@
-import { Route, Redirect } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import { CSSTransition } from 'react-transition-group';
 
 import { Home } from '../../pages/Home';
@@ -21,7 +21,7 @@ const Content = () => {
             {
               ({ match }) =>
                 <CSSTransition
-                  classNames="page__home"
+                  classNames="page"
                   timeout={500}
                   unmountOnExit
                   mountOnEnter

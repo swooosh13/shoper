@@ -15,7 +15,7 @@ const Home = () => {
 
   useEffect(() => {
     dispatch(fetchItems(sortBy, category));
-  }, [category]);
+  }, [category, sortBy, dispatch]);
 
   const onSelectCategory = useCallback((index) => {
     dispatch(actions.setCategory(index));
@@ -23,7 +23,7 @@ const Home = () => {
 
   return (
     <>
-      <div className="content__main home page__home">
+      <div className="content__main page">
         <div className="home__categories">
           <Categories
             activeCategory={category}
