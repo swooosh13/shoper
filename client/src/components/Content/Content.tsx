@@ -13,6 +13,7 @@ const Content = () => {
     { path: '/item/:itemId?', Component: ProfileContainer },
     { path: '/about', Component: About },
   ]
+  
   return (
     <div className="content">
       {

@@ -2,9 +2,6 @@ import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { withRouter, RouteComponentProps, Redirect } from 'react-router-dom';
 
-// TODO: transition profile & items
-// import { CSSTransition } from 'react-transition-group';
-
 import { useAppSelector } from '../../redux/hooks';
 import { LikedItem } from '../../redux/types';
 import { getItemProfile } from '../../redux/thunks/items';
@@ -33,7 +30,7 @@ const ProfileContainer = (props: PropsType) => {
     } else {
       dispatch(getItemProfile(itemId));
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+
   }, []);
 
   return (
@@ -45,6 +42,6 @@ const ProfileContainer = (props: PropsType) => {
 
 const ProfileContainerWithRouter = withRouter(ProfileContainer);
 
-export  {
+export {
   ProfileContainerWithRouter as ProfileContainer
 };

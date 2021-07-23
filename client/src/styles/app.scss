@@ -1,5 +1,6 @@
-@import './components/all';
-
+@import "./components/all";
+@import "./pages/all";
+@import "./app-main";
 
 * {
   font-family: "Courier Prime", monospace;
@@ -39,30 +40,37 @@
 
 .page {
   position: absolute;
-  justify-content: center;
   width: 800px;
 }
 
 .page-enter-active {
-  animation: fade-in 1s forwards;
+  animation: fade-in 0.25s ease-in-out forwards;
 }
 
 .page-exit-active {
-  animation: fade-out 1s forwards;
+  animation: fade-out 0.25s ease-in-out forwards;
 }
 
 @keyframes fade-in {
   0% {
     opacity: 0;
+    transform: translate3d(0px, -25px, 0);
+  }
+  50% {
+    opacity: 0.5;
   }
   100% {
     opacity: 1;
+    transform: translate3d(0, 0, 0);
   }
 }
 
 @keyframes fade-out {
   0% {
     opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
   }
   100% {
     opacity: 0;

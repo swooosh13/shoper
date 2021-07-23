@@ -3,8 +3,8 @@ import {Nullable} from "../redux/types";
 
 type CategoriesType = {
   activeCategory: Nullable<number>;
-  onClickCategory: (index: Nullable<number>) => void;
   items?: string[];
+  onClickCategory: (index: Nullable<number>) => void;
 }
 
 const Categories = React.memo(({activeCategory, onClickCategory, items}: CategoriesType) => {

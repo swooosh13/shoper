@@ -5,7 +5,6 @@ type HeaderType = {
   type?: 'home' | 'about' | null;
 }
 
-// TODO: убрать path? придумать
 const Header = ({ path = [''], type = 'home' }: HeaderType) => {
   const { totalCount } = useAppSelector(({ likes }) => likes);
   const isAbout = type === 'about' ? true : false;

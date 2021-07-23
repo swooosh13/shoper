@@ -18,7 +18,6 @@ const Profile = ({ itemProfile, onClickAddItem }: PropsType) => {
     </div>
   }
 
-
   const onAddItem = () => {
     const obj = {
       id: itemProfile.id,
