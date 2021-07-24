@@ -1,0 +1,47 @@
+%shoper-button-shared {
+  font-family:'Courier New', Courier, monospace;
+  font-size: 14px;
+  background: #000;
+  color: #fff;
+  border-radius: 1px;
+  border: none;
+
+  min-width: 45px;
+  max-width: 120px;
+  height: 25px;
+  width: 100%;
+
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  &:active {
+    background-color: rgb(44, 43, 43);
+  }
+}
+
+.shoper-button {
+  @extend %shoper-button-shared;
+
+  &--small {
+    @extend %shoper-button-shared;
+    max-width: 50px;
+  }
+
+  &--medium {
+    @extend %shoper-button-shared;
+    max-width: 100px;
+  }
+
+  &--large {
+    @extend %shoper-button-shared;
+    max-width: 130px;
+  }
+}
+
+.primary {
+  background-color: blue;
+  // color: black;
+}

@@ -53,7 +53,7 @@
   .item {
     margin: 2px;
     margin-bottom: 1px;
-    img {
+    &__img {
       &:hover {
         cursor: pointer;
         border: 1px solid #c9c4c4;
