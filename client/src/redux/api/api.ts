@@ -1,6 +1,6 @@
 import axios from "axios";
 
-import { ItemType, Nullable } from "../types";
+import {ItemType, Nullable} from "../types";
 
 const intialSortBy = {
   type: "popular",
@@ -20,17 +20,14 @@ const itemsInstance = axios.create({
 });
 
 class itemsAPI {
-  static fetchItems(
-    sortBy: SortByType = intialSortBy,
-    category: Nullable<number> = null
-  ): Promise<any> {
+  static fetchItems(sortBy: SortByType = intialSortBy, category: Nullable<number> = null): Promise<any> {
     return itemsInstance
-      .get<MyResponseType>(
-        `items?${category !== null ? `category=${category}` : ""}&_sort=${
-          sortBy.type
-        }&_order=${sortBy.order}`
-      )
+      .get<MyResponseType>(`items?${category !== null ? `category=${category}` : ""}&_sort=${sortBy.type}&_order=${sortBy.order}`)
       .then((response) => response.data);
+  }
+
+  static fetchAll(): Promise<any> {
+    return itemsInstance.get('api/item');
   }
 
   static getItemProfile(itemId: number): Promise<any> {
@@ -40,4 +37,9 @@ class itemsAPI {
   }
 }
 
-export { itemsAPI };
+(async () => {
+  const {data} = await itemsAPI.fetchAll();
+  console.log(data);
+}) ()
+
+export {itemsAPI};

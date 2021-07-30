@@ -1,17 +1,17 @@
-import { useCallback, useEffect } from "react";
-import { useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
+import {useCallback, useEffect} from "react";
+import {useDispatch} from "react-redux";
+import {Link} from "react-router-dom";
 
-import { Categories, Item } from '../components/index';
+import {Categories, Item} from '../components/index';
 import * as actions from "../redux/actions/filters";
-import { useAppSelector } from "../redux/hooks";
-import { fetchItems } from "../redux/thunks/items";
-import { categoryNames } from "../redux/utils";
+import {useAppSelector} from "../redux/hooks";
+import {fetchItems} from "../redux/thunks/items";
+import {categoryNames} from "../redux/utils";
 
 const Home = () => {
   const dispatch = useDispatch();
-  const { items, isLoaded } = useAppSelector(({ items }) => items);
-  const { category, sortBy } = useAppSelector(({ filters }) => filters);
+  const {items, isLoaded} = useAppSelector(({items}) => items);
+  const {category, sortBy} = useAppSelector(({filters}) => filters);
 
   useEffect(() => {
     dispatch(fetchItems(sortBy, category));
@@ -28,7 +28,7 @@ const Home = () => {
           <Categories
             activeCategory={category}
             onClickCategory={onSelectCategory}
-            items={categoryNames} />
+            items={categoryNames}/>
         </div>
         <div className="home__items">
           {
@@ -39,7 +39,6 @@ const Home = () => {
                     {...obj}
                   />
                 </Link>
-
               ))
               : null
           }
@@ -48,7 +47,6 @@ const Home = () => {
     </>
   )
 }
-
 
 export {
   Home
