@@ -8,7 +8,7 @@ passportConfig(passport);
 const router = new (Router as any)();
 
 router.post('/', itemController.create);
-router.get('/', passport.authenticate('jwt', {session: false}), itemController.getAll);
+router.get('/', itemController.getAll);
 router.get('/:id', itemController.getOne);
 
 export default router;

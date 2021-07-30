@@ -9,21 +9,16 @@ const {Item, ItemInfo} = Models;
 class ItemController {
   async create(req, res, next) {
     try {
-      // eslint-disable-next-line prefer-const
-      let {name, price, brandId, typeId, info} = req.body;
-      const {img} = req.files;
-      const filename: string = uuidv4() + '.jpeg';
-      img.mv(path.resolve(__dirname, '..', 'static', filename));
+      let {name, price, brandId, typeId, info, img} = req.body;
 
-      const item = await Item.create({name, price, brandId, typeId, img: filename});
+      const item = await Item.create({name, price, brandId, typeId, img});
 
       if (info) {
         info = JSON.parse(info);
 
         info.forEach(x => ItemInfo.create({
-          title:  x.title,
+          title: x.title,
           description: x.description,
-          // eslint-disable-next-line @typescript-eslint/ban-ts-comment
           // @ts-ignore
           itemId: item.id
         }));
@@ -36,7 +31,6 @@ class ItemController {
   }
 
   async getAll(req, res) {
-    // eslint-disable-next-line prefer-const
     let {brandId, typeId, limit, page} = req.query;
 
     page = page || 1;
