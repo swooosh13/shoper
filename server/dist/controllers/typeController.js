@@ -40,21 +40,30 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 exports.__esModule = true;
 var models_1 = __importDefault(require("../models/models"));
+var ApiError_1 = __importDefault(require("../error/ApiError"));
 var Type = models_1["default"].Type;
 var TypeController = /** @class */ (function () {
     function TypeController() {
     }
-    TypeController.prototype.create = function (req, res) {
+    TypeController.prototype.create = function (req, res, next) {
         return __awaiter(this, void 0, void 0, function () {
-            var name, type;
+            var name, type, e_1;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
                         name = req.body.name;
-                        return [4 /*yield*/, Type.create({ name: name })];
+                        _a.label = 1;
                     case 1:
+                        _a.trys.push([1, 3, , 4]);
+                        return [4 /*yield*/, Type.create({ name: name })];
+                    case 2:
                         type = _a.sent();
                         return [2 /*return*/, res.json(type)];
+                    case 3:
+                        e_1 = _a.sent();
+                        next(ApiError_1["default"].badRequest(e_1));
+                        return [3 /*break*/, 4];
+                    case 4: return [2 /*return*/];
                 }
             });
         });

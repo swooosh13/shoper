@@ -4,11 +4,12 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "start": "nodemon index.ts",
+    "start": "nodemon dist/index.js",
     "_comment": {
       "prestart": "npm run build"
     },
     "server:watch": "ts-node-dev --respawn --transpile-only src/index.ts",
+    "server:dev": "ts-node-dev --respawn --transpile-only src/index.ts",
     "test": "jest",
     "build": "tsc"
   },

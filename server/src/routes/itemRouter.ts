@@ -1,9 +1,5 @@
 import Router from "express";
 import itemController from "../controllers/itemController";
-import passport from 'passport';
-import passportConfig from '../middleware/passport';
-
-passportConfig(passport);
 
 const router = new (Router as any)();
 

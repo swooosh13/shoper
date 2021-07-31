@@ -7,7 +7,6 @@ export default new Sequelize(
   {
     dialect: 'postgres',
     host: process.env.DB_HOST,
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
     port: process.env.DB_PORT
   }

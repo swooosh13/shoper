@@ -46,9 +46,9 @@ var cors_1 = __importDefault(require("cors"));
 var express_fileupload_1 = __importDefault(require("express-fileupload"));
 var path_1 = __importDefault(require("path"));
 var passport_1 = __importDefault(require("passport"));
-var db_1 = __importDefault(require("./config/db"));
 var index_1 = __importDefault(require("./routes/index"));
 var ErrorHandlingMiddleware_1 = __importDefault(require("./middleware/ErrorHandlingMiddleware"));
+var passport_2 = __importDefault(require("./middleware/passport"));
 var PORT = process.env.PORT || 5001;
 var app = express_1["default"]();
 app.use(cors_1["default"]());
@@ -56,30 +56,20 @@ app.use(express_1["default"].json());
 app.use(passport_1["default"].initialize());
 app.use(express_1["default"].static(path_1["default"].resolve(__dirname, 'static')));
 app.use(express_fileupload_1["default"]({}));
+passport_2["default"](passport_1["default"]);
 app.use('/api', index_1["default"]);
 app.use(ErrorHandlingMiddleware_1["default"]);
 var start = function () { return __awaiter(void 0, void 0, void 0, function () {
-    var e_1;
     return __generator(this, function (_a) {
-        switch (_a.label) {
-            case 0:
-                _a.trys.push([0, 3, , 4]);
-                return [4 /*yield*/, db_1["default"].authenticate()];
-            case 1:
-                _a.sent();
-                return [4 /*yield*/, db_1["default"].sync()];
-            case 2:
-                _a.sent();
-                app.listen(PORT, function () {
-                    console.log("Server has been started on port " + PORT);
-                });
-                return [3 /*break*/, 4];
-            case 3:
-                e_1 = _a.sent();
-                console.log(e_1);
-                return [3 /*break*/, 4];
-            case 4: return [2 /*return*/];
+        try {
+            app.listen(PORT, function () {
+                console.log("Server has been started on port " + PORT);
+            });
         }
+        catch (e) {
+            console.log(e);
+        }
+        return [2 /*return*/];
     });
 }); };
 start();

@@ -39,8 +39,6 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 exports.__esModule = true;
-var uuid_1 = require("uuid");
-var path_1 = __importDefault(require("path"));
 var models_1 = __importDefault(require("../models/models"));
 var ApiError_1 = __importDefault(require("../error/ApiError"));
 var Item = models_1["default"].Item, ItemInfo = models_1["default"].ItemInfo;
@@ -49,16 +47,13 @@ var ItemController = /** @class */ (function () {
     }
     ItemController.prototype.create = function (req, res, next) {
         return __awaiter(this, void 0, void 0, function () {
-            var _a, name_1, price, brandId, typeId, info, img, filename, item_1, e_1;
+            var _a, name_1, price, brandId, typeId, info, img, item_1, e_1;
             return __generator(this, function (_b) {
                 switch (_b.label) {
                     case 0:
                         _b.trys.push([0, 2, , 3]);
-                        _a = req.body, name_1 = _a.name, price = _a.price, brandId = _a.brandId, typeId = _a.typeId, info = _a.info;
-                        img = req.files.img;
-                        filename = uuid_1.v4() + '.jpeg';
-                        img.mv(path_1["default"].resolve(__dirname, '..', 'static', filename));
-                        return [4 /*yield*/, Item.create({ name: name_1, price: price, brandId: brandId, typeId: typeId, img: filename })];
+                        _a = req.body, name_1 = _a.name, price = _a.price, brandId = _a.brandId, typeId = _a.typeId, info = _a.info, img = _a.img;
+                        return [4 /*yield*/, Item.create({ name: name_1, price: price, brandId: brandId, typeId: typeId, img: img })];
                     case 1:
                         item_1 = _b.sent();
                         if (info) {
@@ -66,7 +61,6 @@ var ItemController = /** @class */ (function () {
                             info.forEach(function (x) { return ItemInfo.create({
                                 title: x.title,
                                 description: x.description,
-                                // eslint-disable-next-line @typescript-eslint/ban-ts-comment
                                 // @ts-ignore
                                 itemId: item_1.id
                             }); });

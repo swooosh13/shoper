@@ -1,5 +1,3 @@
-import {v4 as uuidv4} from 'uuid';
-import path from 'path';
 import Models from '../models/models';
 
 import ApiError from "../error/ApiError";
@@ -16,16 +14,17 @@ class ItemController {
       if (info) {
         info = JSON.parse(info);
 
-        info.forEach(x => ItemInfo.create({
-          title: x.title,
-          description: x.description,
+        const itemInfo = await ItemInfo.create({
+          title: info.title,
+          description: info.description,
           // @ts-ignore
           itemId: item.id
-        }));
+        });
       }
 
       return res.json(item);
     } catch (e) {
+      console.log(e);
       next(ApiError.badRequest(e.message));
     }
   }

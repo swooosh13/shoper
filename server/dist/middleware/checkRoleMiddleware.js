@@ -35,33 +35,26 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 exports.__esModule = true;
-exports.authMiddleware = void 0;
-var passport_jwt_1 = require("passport-jwt");
-var passport_1 = __importDefault(require("passport"));
-var models_1 = __importDefault(require("../models/models"));
-var ApiError_1 = __importDefault(require("../error/ApiError"));
-var User = models_1["default"].User;
-var configPassport = function (passport) {
-    var opts = {};
-    opts.jwtFromRequest = passport_jwt_1.ExtractJwt.fromAuthHeaderAsBearerToken();
-    opts.secretOrKey = process.env.API_KEY;
-    passport.use(new passport_jwt_1.Strategy(opts, function (jwt_payload, next) { return __awaiter(void 0, void 0, void 0, function () {
-        var candidate;
-        return __generator(this, function (_a) {
-            candidate = User.findOne({ where: { email: jwt_payload.email } });
-            if (candidate) {
-                next(null, candidate);
-            }
-            else {
-                next(ApiError_1["default"].badRequest("Пользователь не авторизован"));
-            }
-            return [2 /*return*/];
+function default_1(role) {
+    return function (req, res, next) {
+        return __awaiter(this, void 0, void 0, function () {
+            var user;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, req.user];
+                    case 1:
+                        user = _a.sent();
+                        if (user.dataValues.role === role) {
+                            return [2 /*return*/, next()];
+                        }
+                        return [2 /*return*/, res.status(403).json({
+                                message: "You do not have permission to access",
+                                role: user.role
+                            })];
+                }
+            });
         });
-    }); }));
-};
-exports.authMiddleware = passport_1["default"].authenticate('jwt', { session: false });
-exports["default"] = configPassport;
+    };
+}
+exports["default"] = default_1;

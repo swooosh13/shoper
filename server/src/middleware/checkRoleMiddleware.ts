@@ -7,7 +7,8 @@ export default function (role) {
     }
 
     return res.status(403).json({
-      message: "You do not have permission to access"
+      message: "You do not have permission to access",
+      role: user.role,
     });
-  }
+  };
 }

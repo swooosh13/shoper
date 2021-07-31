@@ -22,7 +22,7 @@ var Item = db_1["default"].define('item', {
     name: { type: sequelize_1.DataTypes.STRING, unique: true, allowNull: false },
     price: { type: sequelize_1.DataTypes.STRING, allowNull: false },
     rating: { type: sequelize_1.DataTypes.INTEGER, defaultValue: 0 },
-    img: { type: sequelize_1.DataTypes.STRING, allowNull: false }
+    img: { type: sequelize_1.DataTypes.ARRAY(sequelize_1.DataTypes.STRING), allowNull: false }
 });
 var Type = db_1["default"].define('type', {
     id: { type: sequelize_1.DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
