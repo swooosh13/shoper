@@ -1,6 +1,7 @@
 {
 	"compilerOptions": {
 		"esModuleInterop": true,
+		"types": ["jest"],
 		"outDir": "dist",
 		"baseUrl": ".",
 		"emitDecoratorMetadata": true,

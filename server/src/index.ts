@@ -6,7 +6,6 @@ import fileUpload from 'express-fileupload';
 import path from 'path';
 import passport from 'passport';
 
-import sequelize from './config/db';
 import router from './routes/index';
 import errorHandlingMiddleware from './middleware/ErrorHandlingMiddleware';
 import passportConfig from './middleware/passport';
@@ -38,3 +37,5 @@ const start = async () => {
 };
 
 start();
+
+export {app};

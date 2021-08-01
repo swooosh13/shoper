@@ -11,5 +11,8 @@ router.use('/user', userRouter);
 router.use('/type', typeRouter);
 router.use('/brand', brandRouter);
 router.use('/item', itemRouter);
+router.use('/check', (req, res) => {
+  res.status(200).json({message: "ok"});
+})
 
 export default router;
