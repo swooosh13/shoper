@@ -1,7 +1,8 @@
 server/node_modules
-sever/dist
+server/dist
 server/.env
 server/.eslintcache
 server/static
 .idea
 images
+dist
