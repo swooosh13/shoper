@@ -37,9 +37,12 @@ class itemsAPI {
   }
 }
 
-(async () => {
-  const {data} = await itemsAPI.fetchAll();
-  console.log(data);
-}) ()
 
-export {itemsAPI};
+itemsAPI.fetchAll().then(({data}: any) => {
+  console.log(data);
+});
+
+
+export {
+  itemsAPI
+}
