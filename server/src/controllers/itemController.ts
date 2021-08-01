@@ -3,8 +3,7 @@ import Models from "../models/models";
 import ApiError from "../error/ApiError";
 
 const { Item, ItemInfo } = Models;
-
-class ItemController {
+class ItemControllerCreate {
   async create(req, res, next) {
     try {
       let { name, price, brandId, typeId, info, img } = req.body;
@@ -27,6 +26,17 @@ class ItemController {
       console.log(e);
       next(ApiError.badRequest(e.message));
     }
+  }
+}
+
+class ItemControllerWithGetters extends ItemControllerCreate {
+  async getOne(req, res) {
+    const { id } = req.params;
+    const item = await Item.findOne({
+      where: { id },
+      include: [{ model: ItemInfo, as: "info" }],
+    });
+    return res.json(item);
   }
 
   async getAll(req, res) {
@@ -66,14 +76,14 @@ class ItemController {
     console.log(page);
     return res.json({ respData, page: page, limit: limit });
   }
+}
 
-  async getOne(req, res) {
-    const { id } = req.params;
-    const item = await Item.findOne({
-      where: { id },
-      include: [{ model: ItemInfo, as: "info" }],
-    });
-    return res.json(item);
+class ItemControllerWithInfo extends ItemControllerWithGetters{
+  async getItemInfo(req, res) {
+    const { id } = req.query;
+
+    const itemInfo = await ItemInfo.findAll({ where: id });
+    return res.json(itemInfo);
   }
 
   async setItemInfo(req, res) {
@@ -86,12 +96,6 @@ class ItemController {
     });
     return res.json(itemInfo);
   }
-  async getItemInfo(req, res) {
-    const { id } = req.query;
-
-    const itemInfo = await ItemInfo.findAll({ where: id });
-    return res.json(itemInfo);
-  }
 }
 
-export default new ItemController();
+export default (new ItemControllerWithInfo ());
