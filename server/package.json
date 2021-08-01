@@ -4,7 +4,7 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "start": "nodemon dist/index.js",
+    "start": "nodemon dist/src/index.js",
     "prestart": "yarn run build",
     "server:watch": "ts-node-dev --respawn --transpile-only src/index.ts",
     "server:dev": "ts-node-dev --respawn --transpile-only src/index.ts",
